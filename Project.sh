@@ -118,7 +118,7 @@ read dep_money
 		done
 
 
-echo "$(($(tail -1 account_info.csv | awk '{print $1}' FS=",")+1)), $customer_name, $D_birth, $I_D, $email_add, $country, $city, $ph_number, $acc_type, $dep_money" >> /home/carnage/final_project/account_info.csv
+echo "$(($(tail -1 account_info.csv | awk '{print $1}' FS=",")+1)), $customer_name, $D_birth, $I_D, $email_add, $country, $city, $ph_number, $acc_type, $dep_money" >> account_info.csv
 
 echo -e "\e[94mYour account iformation is:\e[0m \n"
 echo -e "\e[94mID", "Customer Name", "Date of Birth", "National ID", "Emaill Address", "Country", "City", "Phone Number", "Account Type", "Money Deposit\e[0m"
