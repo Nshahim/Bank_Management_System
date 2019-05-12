@@ -163,7 +163,7 @@ case $input in
 		read name
 
 		awk -v id=$id_num -v data=$name 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $2=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 			
 	;;
 	2) echo -e "\e[94mEnter your ID Number\e[0m\n"
@@ -171,42 +171,42 @@ case $input in
 		echo "Enter Your Birth Day"
 		read b_date
 			awk -v id=$id_num -v data=$b_date 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $3=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	3) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
 		echo "Enter the new National I.D card number"
 		read N_ID
 			awk -v id=$id_num -v data=$N_ID 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $4=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	4) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
 		echo "Enter your new Email Address"
 		read email_add
 			awk -v id=$id_num -v data=$email_add 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $5=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	5) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
 		echo "Enter your Country"
 		read C_name
 			awk -v id=$id_num -v data=$C_name 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $6=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	6) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
 		echo "Enter Your City"
 		read city
 			awk -v id=$id_num -v data=$city 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $7=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	7) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
 		echo "Enter your new Phone number"
 		read ph_num
 			awk -v id=$id_num -v data=$ph_num 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $8=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	8) echo -e "\e[94mEnter your ID Number\e[0m\n"
 		read id_num
@@ -224,7 +224,7 @@ case $input in
 			read input
 		esac
 			awk -v id=$id_num -v data=$acc_type 'BEGIN{FS=","; OFS=","} { if ($1 ~ id) $9=data; print}' account_info.csv > Data.tmp && mv Data.tmp account_info.csv
-			awk -F, '$1 == 1' account_info.csv
+			awk -F, '$1 == '$id_num'' account_info.csv
 	;;
 	*)
 	echo -e "\e[94mChoose a Valid option\e[0m\n"
